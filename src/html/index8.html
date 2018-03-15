@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/css/style.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAuGeGiFJgClLjhPz6sAm8A9UfMY6MmI" type="text/javascript"></script>
+<script type="text/javascript" src="../scripts/before/mapa.js"></script>
+<script>
+window.onload = function() {
+    var element = document.createElement("script");
+    element.src = "../scripts/before/slide.js";
+    document.body.appendChild(element);
+};  
+</script>
+<body>
+<nav>
+<div class="micon" id="menuicon" onclick="openNav()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<div class="navbar" id="megamenu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9587;</a>
+       <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+		  
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+    </div>
+	        <div class="column">
+          <h3>Category 4</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+    </div>
+  </div> 
+</div>
+</nav>
+<header>
+<div class="slideshow-container">
+<div class="mySlides">
+  <div class="numbertext">1 / 5</div>
+  <img class="sld" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlides">
+  <div class="numbertext">2 / 5</div>
+  <img class="sld" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlides">
+  <div class="numbertext">3 / 5</div>
+    <img class="sld" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+<div class="mySlides">
+  <div class="numbertext">4 / 5</div>
+  <img class="sld" src="../img/bkg/czech-switzerland1920x1080.jpg">
+  <div class="text">Stromy</div>
+</div>
+<div class="mySlides">
+  <div class="numbertext">5 / 5</div>
+  <img class="sld" src="../img/bkg/hluboka-castle-1920x1080.jpg">
+  <div class="text">Kočka</div>
+</div>
+</div>
+<div class="dots">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</header> 
+<div class="sliderow">
+
+<div class="slidebox1">
+<div class="mySlide1">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide1" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide1">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide1" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide1">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide1" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+<div class="slidebox2">
+<div class="mySlide2">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide2" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide2">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide2" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide2">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide2" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+<div class="slidebox3">
+<div class="mySlide3">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide3" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide3">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide3" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide3">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide3" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="mapa">
+  <div id="map"></div>
+ </div>
+ <div class="webrow">
+
+<div class="webbox">
+   <h2>CzechTourism</h2>
+   <a class="weblink" id="web1" href="https://www.czechtourism.com"><img class=linky  id="id1" src="../img/cont/official_travel_1024x768.jpg" alt="CzechTourism"></a>
+</div>
+
+<div class="webbox">
+   <h2>Czech Republic Government</h2>
+   <a class="weblink" id="web1" href="https://www.vlada.cz/en/"><img class=linky  id="id1" src="../img/cont/governmentcr1024x768.jpg" alt="Czech Republic Government"></a>
+</div>
+
+<div class="webbox">
+   <h2>From Wikipedia</h2>
+   <a class="weblink" id="web1" href="https://en.wikipedia.org/wiki/Czech_Republic"><img class=linky  id="id1" src="../img/cont/wikipediacr1024x768.jpg" alt="From Wikipedia"></a>
+ </div>  
+</div>
+
+</body>
+</html> 

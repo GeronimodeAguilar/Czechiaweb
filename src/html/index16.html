@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/css/style.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAuGeGiFJgClLjhPz6sAm8A9UfMY6MmI" type="text/javascript"></script>
+<script type="text/javascript" src="../scripts/before/mapa.js"></script>
+<script>
+window.onload = function() {
+    var element = document.createElement("script");
+    element.src = "../scripts/before/slide.js";
+    document.body.appendChild(element);
+};  
+</script>
+<body>
+<nav>
+<div class="micon" id="menuicon" onclick="openNav()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<div class="navbar" id="megamenu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9587;</a>
+       <div class="menurow">
+        <div class="menucolumn">
+          <h3>Metropolises</h3>
+          <a href="#">Prague</a>
+          <a href="#">Brno</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+        </div>
+        <div class="menucolumn">
+          <h3>Attractions</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Hluboka</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+        </div>
+        <div class="menucolumn">
+          <h3>Open air</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+    </div>
+        <div class="menucolumn">
+          <h3>History</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+    </div>
+  </div> 
+</div>
+</nav>
+<header>
+<div class="slideshow-container">
+<div class="mySlides">
+  <div class="numbtext">1 / 5</div>
+  <img class="sld" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlides">
+  <div class="numbtext">2 / 5</div>
+  <img class="sld" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlides">
+  <div class="numbtext">3 / 5</div>
+    <img class="sld" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+<div class="mySlides">
+  <div class="numbtext">4 / 5</div>
+  <img class="sld" src="../img/bkg/czech-switzerland1920x1080.jpg">
+  <div class="text">Stromy</div>
+</div>
+<div class="mySlides">
+  <div class="numbtext">5 / 5</div>
+  <img class="sld" src="../img/bkg/hluboka-castle-1920x1080.jpg">
+  <div class="text">Kočka</div>
+</div>
+</div>
+<div class="dots">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</header> 
+<div class="sliderow">
+
+<div class="slidebox1">
+<div class="mySlide1">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide1" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide1">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide1" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide1">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide1" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+<div class="slidebox2">
+<div class="mySlide2">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide2" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide2">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide2" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide2">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide2" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+<div class="slidebox3">
+<div class="mySlide3">
+  <div class="numbertext">1 / 5</div>
+  <img class="slide3" src="../img/bkg/prag7_letsady_1920x1080.jpg">    
+  <div class="text">Tučapský kopec</div>
+</div>
+<div class="mySlide3">
+  <div class="numbertext">2 / 5</div>
+  <img class="slide3" src="../img/bkg/prag_3bridges1920x1080.jpg">
+  <div class="text">Buchlov</div>
+</div>
+<div class="mySlide3">
+  <div class="numbertext">3 / 5</div>
+    <img class="slide3" src="../img/bkg/cesky-krumlov1920x1080.jpg">
+  <div class="text">Znak</div>
+</div>
+</div>
+
+</div>
+  <div id="hidbox" class="hidden"> 
+<div class="mapa">
+  <div id="map"></div>
+ </div>
+  </div>
+  <div id="hidbox" class="hidden"> 
+ <div class="webrow">
+
+<div class="webbox">
+   <h2>CzechTourism</h2>
+   <a class="weblink" id="web1" href="https://www.czechtourism.com"><img class=linky  id="id1" src="../img/cont/official_travel_1024x768.jpg" alt="CzechTourism"></a>
+</div>
+
+<div class="webbox">
+   <h2>Czech Republic Government</h2>
+   <a class="weblink" id="web1" href="https://www.vlada.cz/en/"><img class=linky  id="id1" src="../img/cont/governmentcr1024x768.jpg" alt="Czech Republic Government"></a>
+</div>
+
+<div class="webbox">
+   <h2>From Wikipedia</h2>
+   <a class="weblink" id="web1" href="https://en.wikipedia.org/wiki/Czech_Republic"><img class=linky  id="id1" src="../img/cont/wikipediacr1024x768.jpg" alt="From Wikipedia"></a>
+ </div>  
+</div>
+ </div> 
+  <div id="hidbox" class="hidden"> 
+<div class="modalboxy">
+<div class="modalrow">
+  <div class="column">
+    <img src="../img/cont/adrspach1920x1080.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor mod">
+  </div>
+  <div class="column">
+    <img src="../img/cont/fridge_fronside1920x1080.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor mod">
+  </div>
+  <div class="column">
+    <img src="../img/cont/houses1920x1080.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor mod">
+  </div>
+  <div class="column">
+    <img src="../img/cont/pragueorloj1920x1080.jpg"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor mod">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="modalSlides">
+      <div class="numbtext">1 / 4</div>
+      <img class="modaly" src="../img/cont/adrspach1920x1080.jpg">
+    </div>
+
+    <div class="modalSlides">
+      <div class="numbtext">2 / 4</div>
+      <img class="modaly" src="../img/cont/fridge_fronside1920x1080.jpg">
+    </div>
+
+    <div class="modalSlides">
+      <div class="numbtext">3 / 4</div>
+      <img class="modaly" src="../img/cont/houses1920x1080.jpg">
+    </div>
+    
+    <div class="modalSlides">
+      <div class="numbtext">4 / 4</div>
+      <img class="modaly" src="../img/cont/pragueorloj1920x1080.jpg">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../img/cont/adrspach1920x1080.jpg" onclick="currentSlide(1)" alt="Adrspach">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../img/cont/fridge_fronside1920x1080.jpg" onclick="currentSlide(2)" alt="Lednice">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../img/cont/houses1920x1080.jpg" onclick="currentSlide(3)" alt="Domy">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../img/cont/pragueorloj1920x1080.jpg" onclick="currentSlide(4)" alt="Orloj">
+    </div>
+  </div>
+</div>
+  </div>
+</div>  
+</body>
+</html> 
